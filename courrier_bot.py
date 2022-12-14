@@ -197,7 +197,10 @@ ip: {ip}
 
     await ctx.send(text)
 
+with open("token.txt", "r") as fp:
+    token = fp.read()
+
 try:
-    bot.run("MTA0NjU0NzI4NTg5MjQwNzQyNw.GjXbq7.Ynn0VkYoIGDqLDiuSoinHoug5kGMRfrDTMSM-w")
+    bot.run(token)
 finally:
     teuphlib.shutdown()
